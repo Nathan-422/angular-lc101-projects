@@ -1,0 +1,11 @@
+.movies {
+    color: wheat;
+    font-size: 12pt;
+    background: -webkit-linear-gradient(left, rgb(0, 182, 136), rgb(22, 140, 236));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    text-align: center;
+}
