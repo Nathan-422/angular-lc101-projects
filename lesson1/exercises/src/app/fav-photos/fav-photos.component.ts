@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavPhotosComponent implements OnInit {
   photosTitle = 'Photo/Image Section Title Here';
-  image1 = 'https://www.launchcode.org/assets/icons/target-00c7a0bc7776901e3c5cdc4c36c465f19e41a249bc7267a595f0bfa14ab944b7.png';
-  image2 = '';
-  image3 = '';
+  image1 = 'https://live.staticflickr.com/589/31441625712_0dd28dc419_c.jpg';
+  image2 = 'https://live.staticflickr.com/4703/24866041587_603e13e07c_c.jpg';
+  image3 = 'https://live.staticflickr.com/286/30732472003_8660ab8801_c.jpg';
+
+  img1alt = "Tourists at Hvalfjörður"; 
+  img2alt = "Mosfellsbær from Southern Side of Esjan";
+  img3alt = "Northern Lights 10/24/2016";
 
   constructor() { }
 
