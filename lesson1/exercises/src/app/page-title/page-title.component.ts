@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-page-title',
+  selector: 'page-title',
   templateUrl: './page-title.component.html',
   styleUrls: ['./page-title.component.css']
 })
 export class PageTitleComponent implements OnInit {
-
-  constructor() { }
+  
+  title: string;
+  constructor() {
+    this.title = 'You can do anything at Zombocom';
+  }
 
   ngOnInit() {
   }
