@@ -3,9 +3,14 @@ h3 {
 }
 
 img {
-   max-width: 40%;
+   max-width: 90%;
+   margin: 3px;
+   border-radius: 2%;
 }
 
 .photos {
    text-align: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
