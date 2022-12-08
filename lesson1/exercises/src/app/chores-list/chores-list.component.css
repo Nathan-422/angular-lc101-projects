@@ -1,0 +1,13 @@
+.chores {
+    font-size: 12pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+li {
+    font-style: italic;
+}
