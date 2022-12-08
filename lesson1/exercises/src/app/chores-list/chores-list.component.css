@@ -1,6 +1,18 @@
 .chores {
     font-size: 12pt;
     font-family: 'Times New Roman', Times, serif;
+
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+
+    padding: 12px 8px;
+    margin: 5px 0px;
+}
+
+.giphy-embed {
+    width: 100%;
 }
 
 h3 {
