@@ -22,7 +22,7 @@
         <div class="centered col-3">
             <h2>Sidekick</h2>
             <!-- Use *ngIf and the correct placeholder to display a sidekick's image -->
-            <img src="{{placeholder}}" alt="OOPS! No image available."/>
+            <img src="{{selected.image}}" alt="OOPS! No image available."/>
         </div>
 
         <div class="crew col-3">
@@ -35,7 +35,7 @@
     </div>
     <hr>
     <div class = 'centered'>
-        <button>Clear Data & Image</button>
+        <button (click)="selected = false">Clear Data & Image</button>
         <!-- Add a "Send on Mission" button here. -->
     </div>
 </div>
