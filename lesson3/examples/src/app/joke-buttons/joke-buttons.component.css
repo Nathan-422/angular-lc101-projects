@@ -1,0 +1,25 @@
+h3 {
+    display: flex;
+    justify-content: center;
+    color: purple;
+}
+
+div {
+    width: 100%;
+}
+
+.clickable {
+    background-color:coral;
+    display: flex;
+    justify-content: center;
+}
+
+.stationary {
+    display: flex;
+}
+
+button {
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+}

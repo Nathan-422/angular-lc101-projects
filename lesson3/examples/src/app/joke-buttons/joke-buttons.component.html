@@ -1,1 +1,5 @@
-<p>joke-buttons works!</p>
+<div>
+    <h3>{{ buttonHeading }}</h3>
+    <button [class.clickable]="!clickTime" [disabled]="clickTime" (mouseover)="clickTime=true" (mouseout)="clickTime=false">Warning: NSFW (Very Nude)</button>
+    <span class="stationary" [style.justify-content]="position"><button (mouseover)="stayStill()">Hello</button></span>
+</div>
