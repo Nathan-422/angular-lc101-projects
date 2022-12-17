@@ -13,15 +13,15 @@ export class AppComponent {
   width = 0;
   message = "Space shuttle ready for takeoff!";
   grounded = true;
+  
 
-  handleTakeOff(rocketImage: HTMLElement): void {
+  handleTakeOff(rocketImage: HTMLElement, background: HTMLElement): void {
     let result = window.confirm(
       "Are you sure the shuttle is ready for takeoff?"
     );
     if (result) {
       this.grounded = false;
       this.color = "blue";
-      // this.height = 10000;
       this.moveRocket(rocketImage, "up")
       this.width = 0;
       this.message = "Shuttle in flight.";
@@ -34,24 +34,50 @@ export class AppComponent {
 
     switch (direction) {
       case "right":
-        rocketImage.style.left = hPos + 10 + "px";
+        hPos += 10;
+        rocketImage.style.left = hPos + "px";
         this.width += 10000;
         break;
       case "left":
-        rocketImage.style.left = hPos - 10 + "px";
+        hPos -= 10;
+        rocketImage.style.left = hPos + "px";
         this.width -= 10000;
         break;
       case "up":
-        rocketImage.style.bottom = vPos + 10 + "px";
+        vPos += 10;
+        rocketImage.style.bottom = vPos + "px";
         this.height += 10000;
         break;
       case "down":
-        rocketImage.style.bottom = vPos - 10 + "px";
+        vPos -= 10;
+        rocketImage.style.bottom = vPos + "px";
         this.height -= 10000;
         break;
     }
 
-    
+    this.checkCoordinates(hPos, vPos);
+  }
+
+  checkCoordinates(hPos: number, vPos: number): void {
+    if (
+      vPos > 320 ||
+      vPos < 10 &&
+      !this.grounded ||
+      hPos < -10 ||
+      hPos > 460
+    ) {
+      this.color = 'red';
+    } else if (
+      vPos > 300 ||
+      vPos < 20 &&
+      !this.grounded ||
+      hPos < 10 ||
+      hPos > 440
+    ) {
+      this.color = 'orange';
+    }else {
+      this.color = 'blue';
+    }
   }
 
   land(rocketImage: HTMLElement): void {
